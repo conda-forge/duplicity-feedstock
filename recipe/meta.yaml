@@ -1,5 +1,5 @@
 {% set name = "duplicity" %}
-{% set version = "0.8.17" %}
+{% set version = "0.8.19" %}
 
 
 package:
@@ -8,11 +8,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/duplicity-{{ version }}.tar.gz
-  sha256: 1d1be81c3d4bf0109170dacd5254f91ac8d139a474417de6f100bd7c0a4a4cf8
+  sha256: d5dda2918058d0e47bf7a1299cfc9b51cc2f0546920fc3cfcf7ae06fc76d68ba
 
 build:
-  number: 2
-  skip: true   # [py>=40 or py2k or win]
+  number: 0
+  skip: true  # [py>=40 or py2k or win]
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
